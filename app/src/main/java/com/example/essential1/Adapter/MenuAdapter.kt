@@ -9,16 +9,16 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.essential1.Data.MenuItemData
-import com.example.essential1.databinding.ActivityMainBinding
+import com.example.essential1.databinding.ListViewBinding
 
 class MenuAdapter(var conext:Context):
     RecyclerView.Adapter<MenuAdapter.VH>(){
 
-    inner class VH(var binding: ActivityMainBinding):RecyclerView.ViewHolder(binding.root)
+    inner class VH(var binding: ListViewBinding):RecyclerView.ViewHolder(binding.root)
 
     private var onclicklistener:OnClickListener? = null
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VH {
-        var binding = ActivityMainBinding.inflate(LayoutInflater.from(conext),parent,false)
+        var binding = ListViewBinding.inflate(LayoutInflater.from(conext),parent,false)
         return VH(binding)
     }
 
@@ -40,6 +40,8 @@ class MenuAdapter(var conext:Context):
     }
 
     override fun onBindViewHolder(holder: VH, position: Int) {
+        var img = holder.binding.imageView
+        var text = holder.binding.textView
 
     }
     fun onclicklistener(){

@@ -28,6 +28,16 @@
         android:layout_height="600dp"
         >
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recycle"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/list_view"
+            android:layout_height="wrap_content">
+
+
+
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
 
